@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <label for="" v-for="item in ordata" >
+        <input type="checkbox" v-model="hobbies"  :value="item">{{item}}
+      </label>
+
+      <h2>您选择的是：{{hobbies}}</h2>
+    </div>
+    <script>
+        var vue = new Vue({
+            el:"#app",
+            data:{
+              ordata:['篮球','足球','羽毛球','台球','橄榄球','冰球'],
+              hobbies:[]
+
+            },
+        })
+
+    </script>
+  </body>
+</html>

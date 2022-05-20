@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+
+
+    <div id="app">
+      <kk></kk>
+    </div>
+
+    <template id="kd1">
+      <div class="">
+        <h2>{{title}}</h2>
+        <p>nihao world</p>
+      </div>
+
+    </template>
+
+    <script>
+      Vue.component('kk',{
+        template:'#kd1',
+        data(){
+          return {
+            title:'bbbb'
+          }
+        }
+      })
+        var vue = new Vue({
+            el:"#app",
+            data:{
+            },
+        })
+
+    </script>
+  </body>
+</html>

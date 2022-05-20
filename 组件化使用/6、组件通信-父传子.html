@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="../js/vue.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+  <cpn :cmovies="movies"></cpn>
+</div>
+
+<template id="cpn">
+  <div class="">
+    {{cmovies}}
+    <ul>
+      <li v-for="item in cmovies">{{item}}</li>
+    </ul>
+
+  </div>
+</template>
+
+<script>
+
+  const cpn = {
+    template:'#cpn',
+    props:['cmovies'],
+    data(){
+      return {}
+    },
+    methods:{
+    }
+  }
+    var vue = new Vue({
+        el:"#app",
+        data:{
+          movies:['足球','乒乓球','火拳','客户']
+        },
+        components:{
+          cpn
+        }
+    })
+
+</script>
+</body>
+</html>

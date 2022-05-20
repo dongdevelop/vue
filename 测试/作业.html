@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="../js/vue.js"></script>
+  <style>
+    .active{
+      color:red;
+    }
+  </style>
+</head>
+
+<body>
+
+
+<div id="app">
+
+  <ul>
+    <li v-for="(item,index) in psda"
+    :class="{active: currentItem==index}"
+    @click="mmm(index)"
+    >
+
+    {{item}}
+  </li>
+  </ul>
+
+  <h2>---------</h2>
+  <ul>
+    <li v-for="(itema,index) in asd" >{{itema}}</li>
+  </ul>
+</div>
+
+
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+          psda:['1111','22222','33333','44444'],
+          asd:{
+            a:'1aa',
+            b:'2bbb'
+          },
+          currentItem:0
+        },
+        methods:{
+          mmm(index){
+            console.log(index);
+            this.currentItem = index;
+          }
+        }
+    })
+
+</script>
+
+</body>
+</html>

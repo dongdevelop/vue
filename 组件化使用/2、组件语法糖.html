@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+
+
+    <div id="app">
+      <cp1></cp1>
+
+      <cp2></cp2>
+    </div>
+
+
+    <script>
+
+      Vue.component('cp1',{
+        template:`
+          <div>
+            <h2>白1.。。。。</h2>
+          </div>
+        `
+      })
+        var vue = new Vue({
+            el:"#app",
+            data:{
+            },
+            components:{
+              cp2:{
+                template:`
+                  <div>
+                    <h2>水电费123</h2>
+                  </div>
+                `
+              }
+
+            }
+        })
+
+    </script>
+  </body>
+</html>

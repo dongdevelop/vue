@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+
+
+    <div id="app">
+      <pp></pp>
+    </div>
+
+    <template id="pl1">
+      <div class="">
+        <h2>标准的</h2>
+      </div>
+    </template>
+
+
+    <script>
+
+      Vue.component('pp',{
+        template:'#pl1'
+      })
+
+        var vue = new Vue({
+            el:"#app",
+            data:{
+            },
+        })
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+
+<div id="app">
+    <my-con></my-con>
+    <mynp></mynp>
+</div>
+
+
+    <script>
+      const conc = Vue.extend({
+        template:`
+          <div>
+            <div>标题：23324234</div>
+            <div>内容1111</div>
+            <div>内容22222</div>
+          </div>
+        `
+      })
+
+      const conp = Vue.extend({
+        template:`
+          <div>
+            <div>标题1：23324234</div>
+            <div>内容aaaaa1</div>
+            <div>内容bbbb</div>
+          </div>
+        `
+      })
+
+      // 全局组件
+      Vue.component('my-con',conc)
+
+      var vue = new Vue({
+          el:"#app",
+          data:{
+          },
+          // 局部组件
+          components:{
+            mynp:conp
+          }
+      })
+
+
+    </script>
+  </body>
+</html>

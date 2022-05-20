@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="../js/vue.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+  <cpn></cpn>
+  <cpn></cpn>
+  <cpn ref="aaa"></cpn>
+  <button type="button" @click="btnClick">提交</button>
+</div>
+
+<template id="cpn">
+  <div class="">
+    <h2>123123</h2>
+  </div>
+</template>
+
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+        },
+        methods:{
+          btnClick(){
+            console.log(this.$refs.aaa.name);
+            // console.log(this.$children[0].name);
+          }
+        },
+        components:{
+          cpn:{
+            template:'#cpn',
+            data(){
+              return {
+                name:'我是子组件的name'
+              }
+            },
+            methods:{
+              showMess(){
+                console.log('showMess');
+              }
+            }
+          },
+
+        }
+    })
+
+</script>
+
+</body>
+</html>

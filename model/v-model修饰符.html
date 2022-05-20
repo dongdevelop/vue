@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+
+
+    <div id="app">
+      <!-- lazy 输入失去焦点或者回车后显示更新-->
+      <input type="text" name="" value="" v-model.lazy="name">
+      <h2>{{name}}</h2>
+
+
+      <input type="number" name="" value="" v-model.number="mnum">
+      <h2>{{typeof mnum}}：{{mnum}}</h2>
+
+
+    </div>
+    <script>
+        var vue = new Vue({
+            el:"#app",
+            data:{
+              name:'',
+              mnum:0
+            },
+        })
+
+    </script>
+  </body>
+</html>
